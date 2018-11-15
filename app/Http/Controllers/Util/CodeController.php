@@ -12,7 +12,7 @@ class CodeController extends Controller
     public function send(Request $request){
 		//获取所有验证码
 //		dd ($request->all ());
-//		dd($request->username);
+//		dd($request->username);只抓取username这一项数据
 		//随机四位验证码
 		$code=$this->random ();
 
@@ -29,6 +29,7 @@ class CodeController extends Controller
 		return ['code'=>1,'message'=>'验证码提交成功'];
 
 	}
+	//这个方法是随机获取四个验证码
 	private function random($len=4){
     	$str='';
     	for ($i=0;$i<$len;$i++){

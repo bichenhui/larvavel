@@ -7,14 +7,14 @@
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
 
     <!-- Libs CSS -->
-    <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/asset')}}/fonts/feather/feather.min.css">
-    <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/asset')}}/libs/highlight/styles/vs2015.min.css">
-    <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/asset')}}/libs/quill/dist/quill.core.css">
-    <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/asset')}}/libs/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/asset')}}/libs/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/fonts/feather/feather.min.css">
+    <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/highlight/styles/vs2015.min.css">
+    <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/flatpickr/dist/flatpickr.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/asset')}}/css/theme.min.css">
+    <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/css/theme.min.css">
 
     <title>Dashkit</title>
 </head>
@@ -32,7 +32,7 @@
 
         <!-- Brand -->
         <a class="navbar-brand mr-auto" href="index.html">
-            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/logo.svg" alt="..." class="navbar-brand-img">
+            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/logo.svg" alt="..." class="navbar-brand-img">
         </a>
 
         <!-- Form -->
@@ -59,7 +59,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
                                         </div>
 
                                     </div>
@@ -84,7 +84,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
                                         </div>
 
                                     </div>
@@ -110,7 +110,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-4by3">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
                                         </div>
 
                                     </div>
@@ -137,7 +137,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-4by3">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
                                         </div>
 
                                     </div>
@@ -164,7 +164,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-4by3">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
                                         </div>
 
                                     </div>
@@ -191,7 +191,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -218,7 +218,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -292,7 +292,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -321,7 +321,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -350,7 +350,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -379,7 +379,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -408,7 +408,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -437,7 +437,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -466,7 +466,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -495,7 +495,7 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
                                         </div>
 
                                     </div>
@@ -526,23 +526,25 @@
 
             <!-- Dropdown -->
             <div class="dropdown">
-
+            @auth()
                 <!-- Toggle -->
-                {{--<a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                    {{--<img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">--}}
-                {{--</a>--}}
-
-                {{--<!-- Menu -->--}}
-                {{--<div class="dropdown-menu dropdown-menu-right">--}}
-                    {{--<a href="profile-posts.html" class="dropdown-item">Profile</a>--}}
-                    {{--<a href="settings.html" class="dropdown-item">Settings</a>--}}
-                    {{--<hr class="dropdown-divider">--}}
-                    {{--<a href="sign-in.html" class="dropdown-item">Logout</a>--}}
-                {{--</div>--}}
-                <a href="" class="btn btn-white btn-sm">登录</a>
-                <a href="{{route ('regiter')}}" class="btn btn-white btn-sm">注册</a>
+                    <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="{{auth ()->user ()->icon}}" alt="..." class="avatar-img rounded-circle">
+                    </a>
+                    <!-- Menu -->
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item">{{auth ()->user ()->name}}</a>
+                        @if(auth ()->user ()->is_admin ==1)
+                            <a href="{{route('admin.index')}}" class="dropdown-item">后台管理</a>
+                        @endif
+                        <hr class="dropdown-divider">
+                        <a href="{{route('logout')}}" class="dropdown-item">注销登录</a>
+                    </div>
+                @else
+                    <a href="{{route('login')}}" class="btn btn-white btn-sm">登录</a>
+                    <a href="{{route('regiter')}}" class="btn btn-white btn-sm">注册</a>
+                @endauth
             </div>
-
         </div>
 
         <!-- Collapse -->
@@ -1136,7 +1138,7 @@
 
                                 <!-- Avatar -->
                                 <a href="project-overview.html" class="avatar avatar-4by3">
-                                    <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                                    <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
                                 </a>
 
                             </div>
@@ -1184,7 +1186,7 @@
 
                                 <!-- Avatar -->
                                 <a href="project-overview.html" class="avatar avatar-4by3">
-                                    <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
+                                    <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
                                 </a>
 
                             </div>
@@ -1232,7 +1234,7 @@
 
                                 <!-- Avatar -->
                                 <a href="project-overview.html" class="avatar avatar-4by3">
-                                    <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
+                                    <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
                                 </a>
 
                             </div>
@@ -1280,7 +1282,7 @@
 
                                 <!-- Avatar -->
                                 <a href="project-overview.html" class="avatar avatar-4by3">
-                                    <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/projects/project-5.jpg" alt="..." class="avatar-img rounded">
+                                    <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-5.jpg" alt="..." class="avatar-img rounded">
                                 </a>
 
                             </div>
@@ -1395,16 +1397,16 @@
                                 <td class="text-right">
                                     <div class="avatar-group">
                                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                     </div>
                                 </td>
@@ -1443,13 +1445,13 @@
                                 <td class="text-right">
                                     <div class="avatar-group justify-content-end">
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                     </div>
                                 </td>
@@ -1488,13 +1490,13 @@
                                 <td class="text-right">
                                     <div class="avatar-group justify-content-end">
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                     </div>
                                 </td>
@@ -1533,10 +1535,10 @@
                                 <td class="text-right">
                                     <div class="avatar-group justify-content-end">
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                     </div>
                                 </td>
@@ -1575,16 +1577,16 @@
                                 <td class="text-right">
                                     <div class="avatar-group justify-content-end">
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                         <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
-                                            <img src="{{asset('org/Dashkit-1.1.2/asset')}}/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                                            <img src="{{asset ('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
                                         </a>
                                     </div>
                                 </td>
@@ -1622,20 +1624,20 @@
 ================================================== -->
 
 <!-- Libs JS -->
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/jquery/dist/jquery.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/chart.js/dist/Chart.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/chart.js/Chart.extension.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/highlight/highlight.pack.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/flatpickr/dist/flatpickr.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/list.js/dist/list.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/quill/dist/quill.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/dropzone/dist/min/dropzone.min.js"></script>
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/libs/select2/dist/js/select2.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/jquery/dist/jquery.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/chart.js/dist/Chart.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/chart.js/Chart.extension.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/highlight/highlight.pack.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/flatpickr/dist/flatpickr.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/list.js/dist/list.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/quill/dist/quill.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/select2/dist/js/select2.min.js"></script>
 
 <!-- Theme JS -->
-<script src="{{asset('org/Dashkit-1.1.2/asset')}}/js/theme.min.js"></script>
+<script src="{{asset ('org/Dashkit-1.1.2/assets')}}/js/theme.min.js"></script>
 
 </body>
 </html>
