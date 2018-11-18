@@ -25,6 +25,7 @@ class UserController extends Controller
 	//登陆提交
 	public function loginForm(Request $request){
 //    	dd ($request->all ()); 可以打印
+//		dd($request->remember);
 		//验证邮箱 密码
     	$this->validate ($request,[
     		'email'=>'email',
@@ -36,8 +37,9 @@ class UserController extends Controller
 		]);
 // 执行登录  手册 用户认证  手动认证用户
 		$credentials = $request->only('email', 'password');
+//		$request->remember  这是登录时有个记住我按钮 就是用它来操作的
 //		如果验证成功，该attempt方法将返回true。否则，false将被退回。
-		if (\Auth::attempt ($credentials)){
+		if (\Auth::attempt ($credentials,$request->remember)){
 			return redirect ()->route ('home')->with ('success','登录成功');
 		}
 			return redirect ()->back ()->with ('danger','用户名和密码不正确');

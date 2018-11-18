@@ -21,10 +21,15 @@
 Route::get ('/','Home\HomeController@index')->name ('home');
 
 //用户管理
+//注册页面
 Route::get ('/register','UserController@register')->name ('regiter');
+//登录页面
 Route::get ('/login','UserController@login')->name ('login');
+//用户提交注册
 Route::post ('register','UserController@store')->name ('register');
+//登录提交
 Route::post ('/login','UserController@loginForm')->name ('login');
+//注销登录
 Route::get('/logout','UserController@logout')->name('logout');
 //重置密码
 Route::get ('/password_reset','UserController@passwordReset')->name('password_reset');
@@ -41,4 +46,9 @@ Route::any ('/code/send','Util\CodeController@send')->name ('code.send');
 Route::group (['middleware'=>['admin.auth'],'prefix'=>'admin','namespace'=>'Admin','as'=>'admin.'],function (){
 	//prefix'=>'admin' 把'middleware'=>['admin.auth'缩写的方式
 		Route::get ('index','IndexController@index')->name ('index');
+		//创建模型同时创建迁移和工厂
+//	rtisan make:model --migration --factory  Models/Category
+	//创建控制器制定模型
+	//artisan make:controller --model=Models/Category  Admin/CategoryController
+		Route::resource ('category','CategoryController');
 });

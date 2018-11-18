@@ -42,8 +42,8 @@
 
             <!-- Form -->
             <form method="post" action="{{route('password_reset')}}">
-            @csrf
-            <!-- Email address -->
+            @
+            <!-- Email address -->csrf
                 <div class="form-group">
                     <!-- Label -->
                     <label>邮箱</label>

@@ -14,7 +14,7 @@ class UserObserver
      */
     public function created(User $user)
     {
-//    	dd (1);
+//    	dd (1);  这个命令php artisan make:observer UserObserver --model=User
 		$user->email_verified_at = now();
 		$user->save ();
     }
