@@ -32,7 +32,7 @@
 
         <!-- Brand -->
         <a class="navbar-brand mr-auto" href="index.html">
-            <img src="" alt="..." class="navbar-brand-img">
+            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/teams/team-logo-1.jpg" alt="..." class="navbar-brand-img">
         </a>
 
         <!-- Form -->

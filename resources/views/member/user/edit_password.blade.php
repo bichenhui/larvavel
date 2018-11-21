@@ -23,7 +23,6 @@
                         <div class="card-footer">
                             <button class="btn btn-primary btn-sm">确定</button>
                         </div>
-
                 </form>
             </div>
         </div>
