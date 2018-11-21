@@ -19,7 +19,16 @@
 //Route::get ('/','HomeController@index')->name ('home');
 
 Route::get ('/','Home\HomeController@index')->name ('home');
-
+//前台
+Route::group (['prefix'=>'home','namespace'=>'Home','as'=>'home.'],function (){
+	Route::get ('/','HomeController@index')->name ('home');
+	Route::resource ('article','ArticleController');
+});
+//会员中心
+Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],function (){
+	//用户管理
+	Route::resource ('user','UserController');
+});
 //用户管理
 //注册页面
 Route::get ('/register','UserController@register')->name ('regiter');
@@ -39,10 +48,16 @@ Route::post ('/password_reset','UserController@passwordResetForm')->name ('passw
 
 
 //工具类
-Route::any ('/code/send','Util\CodeController@send')->name ('code.send');
-
+Route::group (['prefix'=>'util','namespace'=>'Util','as'=>'util.'],function () {
+	//发送验证码
+	Route::any ('/code/send', 'CodeController@send')->name ('code.send');
+	//上传
+	Route::any ('/upload', 'UploadController@uploader')->name ('upload');
+	Route::any ('/filesLists', 'UploadController@filesLists')->name ('filesLists');
+});
 //后台理由  admin.auth 如果出现这个错误说明 app-http-Kernel.php 没有添加'admin.auth'=>AdminAuthMiddleware::class
 //数据库密码 secret  'middleware'=>['admin.auth'] 监听作用 所以在中间件中做判断是不是管理员和是否登录
+//'admin.auth' 在Kernel.php 里面调用注册 才能使用
 Route::group (['middleware'=>['admin.auth'],'prefix'=>'admin','namespace'=>'Admin','as'=>'admin.'],function (){
 	//prefix'=>'admin' 把'middleware'=>['admin.auth'缩写的方式
 		Route::get ('index','IndexController@index')->name ('index');

@@ -18,7 +18,7 @@ class RegisterNotify extends Notification
      */
     public function __construct($code)
     {
-
+//    调取验证码
         $this->code=$code;
     }
 
@@ -40,7 +40,7 @@ class RegisterNotify extends Notification
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
-    {
+	{
 
         return ( new MailMessage )
 			->subject( '贵人注册验证' )//邮件主题

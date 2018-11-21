@@ -84,4 +84,9 @@ class UserPolicy
     {
         //
     }
+    public function isMine(User $user,User $model){
+
+    	//判断指定用户是不是当前用户
+		return $user->id==$model->id;
+    }
 }

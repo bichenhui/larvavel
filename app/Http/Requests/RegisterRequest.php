@@ -13,6 +13,7 @@ class RegisterRequest extends FormRequest
      */
     public function authorize()
     {
+    	//这里不改成true会报403
         return true;
     }
 

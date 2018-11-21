@@ -59,7 +59,7 @@ class UserController extends Controller
 	public function store(RegisterRequest $request){
 //		dd ($request->all ()); // 如果模板没有给name =“” 就会打印不出来
 		$data=$request->all ();
-//		dd ($data);
+//		dd ($data);   //加密bcrypt
 		$data['password']=bcrypt ($data['password']);
 //		dd ($data);
 		User::create($data);

@@ -317,149 +317,151 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-lg-6 col-xl">
 
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col">
+            <h1 style="width: 100%;height:100%;margin-top:20px;color:chartreuse;text-align: center;">欢迎您进来学习</h1>
+            {{--<div class="col-12 col-lg-6 col-xl">--}}
 
-                                <!-- Title -->
-                                <h6 class="card-title text-uppercase text-muted mb-2">
-                                    Budget
-                                </h6>
+                {{--<!-- Card -->--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<div class="row align-items-center">--}}
+                            {{--<div class="col">--}}
 
-                                <!-- Heading -->
-                                <span class="h2 mb-0">
-                      $24,500
-                    </span>
+                                {{--<!-- Title -->--}}
+                                {{--<h6 class="card-title text-uppercase text-muted mb-2">--}}
+                                    {{--Budget--}}
+                                {{--</h6>--}}
 
-                                <!-- Badge -->
-                                <span class="badge badge-soft-success mt--1">
-                      +3.5%
-                    </span>
+                                {{--<!-- Heading -->--}}
+                                {{--<span class="h2 mb-0">--}}
+                      {{--$24,500--}}
+                    {{--</span>--}}
 
-                            </div>
-                            <div class="col-auto">
+                                {{--<!-- Badge -->--}}
+                                {{--<span class="badge badge-soft-success mt--1">--}}
+                      {{--+3.5%--}}
+                    {{--</span>--}}
 
-                                <!-- Icon -->
-                                <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
+                            {{--</div>--}}
+                            {{--<div class="col-auto">--}}
 
-                            </div>
-                        </div> <!-- / .row -->
+                                {{--<!-- Icon -->--}}
+                                {{--<span class="h2 fe fe-dollar-sign text-muted mb-0"></span>--}}
 
-                    </div>
-                </div>
+                            {{--</div>--}}
+                        {{--</div> <!-- / .row -->--}}
 
-            </div>
-            <div class="col-12 col-lg-6 col-xl">
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col">
+            {{--</div>--}}
+            {{--<div class="col-12 col-lg-6 col-xl">--}}
 
-                                <!-- Title -->
-                                <h6 class="card-title text-uppercase text-muted mb-2">
-                                    Total Hours
-                                </h6>
+                {{--<!-- Card -->--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<div class="row align-items-center">--}}
+                            {{--<div class="col">--}}
 
-                                <!-- Heading -->
-                                <span class="h2 mb-0">
-                      763.5
-                    </span>
+                                {{--<!-- Title -->--}}
+                                {{--<h6 class="card-title text-uppercase text-muted mb-2">--}}
+                                    {{--Total Hours--}}
+                                {{--</h6>--}}
 
-                            </div>
-                            <div class="col-auto">
+                                {{--<!-- Heading -->--}}
+                                {{--<span class="h2 mb-0">--}}
+                      {{--763.5--}}
+                    {{--</span>--}}
 
-                                <!-- Icon -->
-                                <span class="h2 fe fe-briefcase text-muted mb-0"></span>
+                            {{--</div>--}}
+                            {{--<div class="col-auto">--}}
 
-                            </div>
-                        </div> <!-- / .row -->
+                                {{--<!-- Icon -->--}}
+                                {{--<span class="h2 fe fe-briefcase text-muted mb-0"></span>--}}
 
-                    </div>
-                </div>
+                            {{--</div>--}}
+                        {{--</div> <!-- / .row -->--}}
 
-            </div>
-            <div class="col-12 col-lg-6 col-xl">
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col">
+            {{--</div>--}}
+            {{--<div class="col-12 col-lg-6 col-xl">--}}
 
-                                <!-- Title -->
-                                <h6 class="card-title text-uppercase text-muted mb-2">
-                                    Progress
-                                </h6>
+                {{--<!-- Card -->--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<div class="row align-items-center">--}}
+                            {{--<div class="col">--}}
 
-                                <div class="row align-items-center no-gutters">
-                                    <div class="col-auto">
+                                {{--<!-- Title -->--}}
+                                {{--<h6 class="card-title text-uppercase text-muted mb-2">--}}
+                                    {{--Progress--}}
+                                {{--</h6>--}}
 
-                                        <!-- Heading -->
-                                        <span class="h2 mr-2 mb-0">
-                          84.5%
-                        </span>
+                                {{--<div class="row align-items-center no-gutters">--}}
+                                    {{--<div class="col-auto">--}}
 
-                                    </div>
-                                    <div class="col">
+                                        {{--<!-- Heading -->--}}
+                                        {{--<span class="h2 mr-2 mb-0">--}}
+                          {{--84.5%--}}
+                        {{--</span>--}}
 
-                                        <!-- Progress -->
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
+                                    {{--</div>--}}
+                                    {{--<div class="col">--}}
 
-                                    </div>
-                                </div> <!-- / .row -->
+                                        {{--<!-- Progress -->--}}
+                                        {{--<div class="progress progress-sm">--}}
+                                            {{--<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>--}}
+                                        {{--</div>--}}
 
-                            </div>
-                            <div class="col-auto">
+                                    {{--</div>--}}
+                                {{--</div> <!-- / .row -->--}}
 
-                                <!-- Icon -->
-                                <span class="h2 fe fe-clipboard text-muted mb-0"></span>
+                            {{--</div>--}}
+                            {{--<div class="col-auto">--}}
 
-                            </div>
-                        </div> <!-- / .row -->
+                                {{--<!-- Icon -->--}}
+                                {{--<span class="h2 fe fe-clipboard text-muted mb-0"></span>--}}
 
-                    </div>
-                </div>
+                            {{--</div>--}}
+                        {{--</div> <!-- / .row -->--}}
 
-            </div>
-            <div class="col-12 col-lg-6 col-xl">
+                    {{--</div>--}}
+                {{--</div>--}}
 
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col">
+            {{--</div>--}}
+            {{--<div class="col-12 col-lg-6 col-xl">--}}
 
-                                <!-- Title -->
-                                <h6 class="card-title text-uppercase text-muted mb-2">
-                                    Effective Hourly
-                                </h6>
+                {{--<!-- Card -->--}}
+                {{--<div class="card">--}}
+                    {{--<div class="card-body">--}}
+                        {{--<div class="row align-items-center">--}}
+                            {{--<div class="col">--}}
 
-                                <!-- Heading -->
-                                <span class="h2 mb-0">
-                      $85.50
-                    </span>
+                                {{--<!-- Title -->--}}
+                                {{--<h6 class="card-title text-uppercase text-muted mb-2">--}}
+                                    {{--Effective Hourly--}}
+                                {{--</h6>--}}
 
-                            </div>
-                            <div class="col-auto">
+                                {{--<!-- Heading -->--}}
+                                {{--<span class="h2 mb-0">--}}
+                      {{--$85.50--}}
+                    {{--</span>--}}
 
-                                <!-- Icon -->
-                                <span class="h2 fe fe-clock text-muted mb-0"></span>
+                            {{--</div>--}}
+                            {{--<div class="col-auto">--}}
 
-                            </div>
-                        </div> <!-- / .row -->
+                                {{--<!-- Icon -->--}}
+                                {{--<span class="h2 fe fe-clock text-muted mb-0"></span>--}}
 
-                    </div>
-                </div>
+                            {{--</div>--}}
+                        {{--</div> <!-- / .row -->--}}
 
-            </div>
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            {{--</div>--}}
         </div> <!-- / .row -->
         <div class="row">
             <div class="col-12 col-xl-4">
