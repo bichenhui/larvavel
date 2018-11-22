@@ -19,7 +19,7 @@ class UserController extends Controller
 	}
 
 	//登录
-    public function login(){
+    public function login(Request $request){
 		return view ('user.login');
 	}
 	//登陆提交
@@ -40,7 +40,9 @@ class UserController extends Controller
 //		$request->remember  这是登录时有个记住我按钮 就是用它来操作的
 //		如果验证成功，该attempt方法将返回true。否则，false将被退回。
 		if (\Auth::attempt ($credentials,$request->remember)){
-			return redirect ()->route ('home')->with ('success','登录成功');
+			//登录成功，跳转到首页
+
+			return redirect ($request->from)->with ('success','登录成功');
 		}
 			return redirect ()->back ()->with ('danger','用户名和密码不正确');
 

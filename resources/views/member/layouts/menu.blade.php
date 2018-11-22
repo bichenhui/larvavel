@@ -55,3 +55,10 @@
         </div>
     </div>
 </div>
+@push('css')
+    <style>
+        .active{
+            color:white!important;
+        }
+    </style>
+@endpush
