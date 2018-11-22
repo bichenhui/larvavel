@@ -28,6 +28,7 @@ Route::group (['prefix'=>'home','namespace'=>'Home','as'=>'home.'],function (){
 Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],function (){
 	//用户管理
 	Route::resource ('user','UserController');
+	Route::get ('attention/{user}','UserController@attention')->name ('attention');
 });
 //用户管理
 //注册页面

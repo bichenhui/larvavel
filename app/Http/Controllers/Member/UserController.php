@@ -78,7 +78,6 @@ class UserController extends Controller
 
 		]);
 		//密码加密
-
 		if ($request->password){
 			$data['password']=bcrypt ($data['password']);
 		}
@@ -92,4 +91,11 @@ class UserController extends Controller
     {
         //
     }
+    public function attention(User $user){
+		//关注 取消关注
+		//这里user 被关注着
+//		dd ($user);
+		$user->fans ()->toggle(auth ()->user ());
+		return back ();
+	}
 }

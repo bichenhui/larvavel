@@ -62,7 +62,7 @@
                                         <div class="row align-items-center">
                                             <div class="col-auto">
                                                 <!-- Avatar -->
-                                                <a href="" class="avatar avatar-sm">
+                                                <a href="{{route('member.user.show',$article->user)}}" class="avatar avatar-sm">
                                                     <img src="{{$article->user->icon}}" alt="..." class="avatar-img rounded">
                                                 </a>
 
@@ -81,7 +81,7 @@
                                                     {{--Carbon 处理时间库--}}
                                                     <i class="fa fa-clock-o" aria-hidden="true"></i> {{$article->created_at->diffForHumans()}}
 
-                                                    <a href="http://www.houdunren.com/edu/topics_1.html" class="text-secondary ml-2">
+                                                    <a href="{{route ('home.article.index',['category'=>$article->category->id])}}" class="text-secondary ml-2">
                                                         <i class="fa fa-folder-o" aria-hidden="true"></i> {{$article->category->title}}</a>
                                                 </p>
 
