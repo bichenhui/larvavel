@@ -58,8 +58,6 @@ class UserController extends Controller
 		$type=$request->query ('type');
 		return view ('member.user.edit_'.$type,compact ('user'));
     }
-
-
     public function update(Request $request, User $user)
     {
 
@@ -94,8 +92,21 @@ class UserController extends Controller
     public function attention(User $user){
 		//关注 取消关注
 		//这里user 被关注着
-//		dd ($user);
+//		dd ($user->toArray ());
+//		toggle 关注 取消关注
 		$user->fans ()->toggle(auth ()->user ());
 		return back ();
+	}
+	//我的粉丝
+	public function myFans(User $user){
+		//获取$user用户粉丝
+		$fans=$user->fans ()->paginate (10);
+//		dd ($fans);
+    	return view ('member.user.my_fans',compact ('user','fans'));
+	}
+	//我关注的人
+	public function myFollowing(User $user){
+		$followings=$user->following()->paginate(10);
+		return view ('member.user.my_following',compact ('user','followings'));
 	}
 }

@@ -29,6 +29,9 @@ Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],functio
 	//用户管理
 	Route::resource ('user','UserController');
 	Route::get ('attention/{user}','UserController@attention')->name ('attention');
+	//我的粉丝
+	Route::get ('my_fans/{user}','UserController@myFans')->name ('my_fans');
+	Route::get ('my_following/{user}','UserController@myFollowing')->name ('my_following');
 });
 //用户管理
 //注册页面

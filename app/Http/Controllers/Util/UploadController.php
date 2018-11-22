@@ -23,8 +23,8 @@ class UploadController extends Controller
 		if ($file){
 			$path=$file->store ('attachment','attachment');
 			//将上传数据存储到数据表
-			//我们创建附件的模型与迁移文件
-			//关联添加
+			//我们创建附件的模型与迁移文件 artisan make:model --migration Models/Attachment
+			//关联添加  auth ()->user () 获取当前用户对象
 			auth ()->user ()->attachment()->create([
 			  //$file->getClientOriginalName()获取客户端原始文件名
 				'name'=>$file->getClientOriginalName (),
@@ -48,6 +48,7 @@ class UploadController extends Controller
 		}
 	}
 	//验证上传类型
+	//getClientOriginalExtension  获取文件的扩展名
 	private function checkType($file){
     	if (!in_array (strtolower ($file->getClientOriginalExtension()),['jpeg','jpg','png'])){
 			//return  ['message' =>'类型不允许', 'code' => 403];
@@ -72,6 +73,7 @@ class UploadController extends Controller
 			'code'=>0
 		];
 	}
+
 
 
 }

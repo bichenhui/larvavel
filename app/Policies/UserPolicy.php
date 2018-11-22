@@ -89,4 +89,9 @@ class UserPolicy
     	//判断指定用户是不是当前用户
 		return $user->id==$model->id;
     }
+    //检测登录用户和指定用户不是一个人
+    public function isNotMine(User $user,User $model){
+
+    	return $user->id != $model->id;
+	}
 }

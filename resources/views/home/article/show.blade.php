@@ -56,6 +56,8 @@
                             </a>
                         </div>
                     </div>
+                    @auth()
+                    @can('isNotMine',$article->user)
                     <div class="card-footer text-muted">
                         <a class="btn btn-white btn-block btn-xs" href="{{route ('member.attention',$article->user)}}">
                             @if($article->user->fans->contains(auth ()->user ()))
@@ -65,6 +67,8 @@
                                 @endif
                         </a>
                     </div>
+                        @endcan
+                        @endauth()
                 </div>
             </div>
         </div>
