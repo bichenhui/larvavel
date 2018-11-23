@@ -53,9 +53,9 @@
 
                                 </div>
                             @endforeach
-                                {{$followings->links()}}
-                        </div>
 
+                        </div>
+                    {{$followings->links()}}
                 </div>
                 @endif
             </div>

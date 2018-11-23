@@ -107,13 +107,13 @@ class UserController extends Controller
 	//我的粉丝
 	public function myFans(User $user){
 		//获取$user用户粉丝
-		$fans=$user->fans ()->paginate (10);
+		$fans=$user->fans ()->paginate (9);
 //		dd ($fans);
     	return view ('member.user.my_fans',compact ('user','fans'));
 	}
 	//我关注的人
 	public function myFollowing(User $user){
-		$followings=$user->following()->paginate(10);
+		$followings=$user->following()->paginate(9);
 		return view ('member.user.my_following',compact ('user','followings'));
 	}
 }
