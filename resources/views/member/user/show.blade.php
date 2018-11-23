@@ -55,7 +55,7 @@
                                                         </h4>
 
                                                         <p class="card-text small mb-1">
-                                                            <a href="{{route('member.user.show',$article->user)}}" class="text-secondary mr-2">
+                                                            <a href="{{route('home.article.show',$article)}}" class="text-secondary mr-2">
                                                                 <i class="fa fa-user-circle" aria-hidden="true"></i> {{$article->user->name}}
                                                             </a>
 

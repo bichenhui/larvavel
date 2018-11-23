@@ -41,8 +41,10 @@ class UserController extends Controller
 //		如果验证成功，该attempt方法将返回true。否则，false将被退回。
 		if (\Auth::attempt ($credentials,$request->remember)){
 			//登录成功，跳转到首页
-
-			return redirect ($request->from)->with ('success','登录成功');
+			if ($request->from){
+				return redirect($request->from)->with('success','登录成功');
+			}
+			return redirect ()->route ('home')->with ('success','登录成功');
 		}
 			return redirect ()->back ()->with ('danger','用户名和密码不正确');
 

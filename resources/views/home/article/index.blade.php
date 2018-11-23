@@ -44,7 +44,7 @@
                                 <div class="col-auto">
 
                                     <!-- Button -->
-                                    <a href="{{route('home.article.create')}}" class="btn btn-sm btn-primary">
+                                    <a href="{{route('login',['from'=>url()->full()])}}" class="btn btn-sm btn-primary">
                                         发表文章
                                     </a>
 
@@ -75,7 +75,7 @@
                                                 </h4>
 
                                                 <p class="card-text small mb-1">
-                                                    <a href="" class="text-secondary mr-2">
+                                                    <a href="{{route ('member.user.show',$article->user)}}" class="text-secondary mr-2">
                                                         <i class="fa fa-user-circle" aria-hidden="true"></i> {{$article->user->name}}
                                                     </a>
                                                     {{--Carbon 处理时间库--}}
