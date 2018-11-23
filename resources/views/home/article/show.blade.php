@@ -39,6 +39,7 @@
                             </div>
                         </div>
                     </div>
+                    <a href="{{route ('home.article.index')}}" style="text-align: right;">返回列表</a>
                 </div>
                 @include('home.layouts.comment')
             </div>

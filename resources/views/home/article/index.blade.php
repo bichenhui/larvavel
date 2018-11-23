@@ -44,7 +44,7 @@
                                 <div class="col-auto">
 
                                     <!-- Button -->
-                                    <a href="{{route('login',['from'=>url()->full()])}}" class="btn btn-sm btn-primary">
+                                    <a href="{{route ('home.article.create',['from'=>url()->full()])}}" class="btn btn-sm btn-primary">
                                         发表文章
                                     </a>
 
