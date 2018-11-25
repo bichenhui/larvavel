@@ -22,7 +22,10 @@ Route::get ('/','Home\HomeController@index')->name ('home');
 //前台
 Route::group (['prefix'=>'home','namespace'=>'Home','as'=>'home.'],function (){
 	Route::get ('/','HomeController@index')->name ('home');
+	//；文章管理
 	Route::resource ('article','ArticleController');
+	//用户评论
+	Route::resource ('comment','CommentController');
 });
 //会员中心
 Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],function (){
