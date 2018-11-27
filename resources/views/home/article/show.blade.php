@@ -7,7 +7,17 @@
                     <div class="row">
                         <div class="col text-right">
                             <a href="" class="btn btn-xs">
-                                <i class="fa fa-heart-o" aria-hidden="true"></i> 收藏</a>
+                                @auth
+                                @if($article->collect->where('user_id',auth ()->id ())->first())
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    <a href="{{route ('home.collect.make',['type'=>'article','id'=>$article['id']])}}">已经收藏</a>
+                                @else
+                                    <a href="{{route ('home.collect.make',['type'=>'article','id'=>$article['id']])}}">收藏</a>
+                                @endif
+                                @else
+                                    <a class="btn btn-white" href="{{route('login',['from'=>url()->full()])}}">收藏</a>
+                                @endauth
+                            </a>
                         </div>
                     </div>
                     <div class="row">
@@ -40,7 +50,34 @@
                         </div>
                     </div>
                     <a href="{{route ('home.article.index')}}" style="text-align: right;">返回列表</a>
+                    <hr>
+                    <div class="text-center">
+                 @auth
+                            {{--//路由参数:type 指的是点赞类型(article/comment)  id  点赞的文章/评论 id--}}
+                     @if($article->zan->where('user_id',auth()->id())->first())
+                                <a class="btn btn-danger" href="{{route('home.zan.make',['type'=>'article','id'=>$article['id']])}}">👍 取消赞</a>
+                     @else
+                                <a class="btn btn-white" href="{{route('home.zan.make',['type'=>'article','id'=>$article['id']])}}">👍 点赞</a>
+                     @endif
+                  @else
+                            <a class="btn btn-white" href="{{route('login',['from'=>url()->full()])}}">👍 点赞</a>
+                 @endauth
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 mr--3">
+
+                            <div class="avatar-group d-none d-sm-flex">
+                                @foreach($article->zan as $zan)
+                                    <a href="{{route('member.user.show',$zan->user)}}" class="avatar avatar-xs" data-toggle="tooltip" title="" data-original-title="Ab Hadley">
+                                        <img src="{{$zan->user->icon}}" alt="..." class="avatar-img rounded-circle border border-white">
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 @include('home.layouts.comment')
             </div>
             <div class="col-12 col-xl-3">

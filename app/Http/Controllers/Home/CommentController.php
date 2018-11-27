@@ -15,8 +15,11 @@ class CommentController extends Controller
 //		dd ($comment->get());
 //		$comments = $comment->where('article_id',$request->article_id)->get();
 		////这样关联,保证 Comment 模型中有关联 user 的方法
-		$comments=$comment->with('user')->where('article_id',$request->article_id)->get ();
+		$comments=$comment->with(['user'])->where('article_id',$request->article_id)->get ();
 //		dd($comments->toArray());
+		foreach ($comments as $comment){
+			$comment->zan_num=$comment->zan->count();
+		}
 		return ['code'=>1,'message'=>'','comments'=>$comments];
     }
 	//添加评论
@@ -32,6 +35,7 @@ class CommentController extends Controller
 		//dd($comment->with('user')->get()->toArray());
 		//关联 user
 		$comment=$comment->with('user')->find($comment->id);
+		$comment->zan_num=$comment->zan->count();
 //		dd($comment->toArray());
 		return ['code'=>1,'message'=>'','comment'=>$comment];
     }

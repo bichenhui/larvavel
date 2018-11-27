@@ -31,15 +31,15 @@
 
                                 <!-- Time -->
                                 <time class="comment-time">
-                                    👍 2 | @{{ v.created_at }}
+                                    <a href="" @click.prevent="zan(v)" class="text-muted">👍 @{{v.zan_num}}</a>
+                                      |
+                                    @{{ v.created_at }}
                                 </time>
-
                             </div>
                         </div> <!-- / .row -->
 
                         <!-- Text -->
                         <p class="comment-text" v-html="v.content">
-
                         </p>
                     </div>
 
@@ -77,7 +77,7 @@
     {{--@{{comment}}--}}
 </div>
 @push('js')
-    @auth()
+
     <script>
         require(['hdjs','vue','axios', 'MarkdownIt', 'marked', 'highlight'],function(hdjs,Vue,axios, MarkdownIt, marked){
         var vm = new Vue({
@@ -86,7 +86,16 @@
                     comment:{content:''}, //当前评论
                     comments:[]//获取所有评论
                 },
+            updated(){
+                $(document).ready(function () {
+                    $('pre code').each(function (i, block) {
+                        hljs.highlightBlock(block);
+                    });
+                });
+            },
                 methods:{
+                    @auth()
+
                     //提交评论
                     send(){
                         // alert(1);
@@ -110,11 +119,7 @@
                             //将 markdown 转为 html
                             let md = new MarkdownIt();
                             response.data.comment.content = md.render(response.data.comment.content);
-                            $(document).ready(function () {
-                                $('pre code').each(function (i, block) {
-                                    hljs.highlightBlock(block);
-                                });
-                            });
+
                             //清空 vue 数据
                             this.comment.content = '';
                             //清空编辑器内容
@@ -124,9 +129,20 @@
                             editormd.replaceSelection("");
                         })
 
-                    }
+                    },
+                    //点赞
+                    zan(v){
+
+                        let url='/home/zan/make?type=comment&id='+v.id;
+                        axios.get(url).then((response)=>{
+                            console.log(response.data.num);
+                            v.zan_num=response.data.num;
+                        });
+                    },
+                    @endauth
                 },
               mounted() {
+                    @auth()
                   //渲染编辑器
                   hdjs.editormd("editormd", {
                       width: '100%',
@@ -150,6 +166,7 @@
                           vm.$set(vm.comment, 'content', this.getValue());
                       }
                   });
+                  @endauth
                   //请求当前文章所有评论数据
                   axios.get('{{route("home.comment.index",['article_id'=>$article['id']])}}')
                       .then((response) => {
@@ -159,16 +176,13 @@
                           //console.log(this.comments);
                           this.comments.forEach((v, k) => {
                               v.content = md.render(v.content)
-                          })
-                          $(document).ready(function () {
-                              $('pre code').each(function (i, block) {
-                                  hljs.highlightBlock(block);
-                              });
+
                           });
+
                       });
-              },
+                  },
             });
         })
     </script>
-    @endauth
+
 @endpush

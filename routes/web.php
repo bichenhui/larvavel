@@ -26,6 +26,10 @@ Route::group (['prefix'=>'home','namespace'=>'Home','as'=>'home.'],function (){
 	Route::resource ('article','ArticleController');
 	//用户评论
 	Route::resource ('comment','CommentController');
+	//点赞 取消点赞
+	Route::get ('zan/make','ZanColltroller@make')->name ('zan.make');
+	//收藏 取消收藏
+	Route::get ('collect/make','CollectController@make')->name ('collect.make');
 });
 //会员中心
 Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],function (){
@@ -35,6 +39,14 @@ Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],functio
 	//我的粉丝
 	Route::get ('my_fans/{user}','UserController@myFans')->name ('my_fans');
 	Route::get ('my_following/{user}','UserController@myFollowing')->name ('my_following');
+	//我的收藏
+	Route::get ('my_collect/{user}','UserController@collect')->name ('my_collect');
+	//我的点赞
+	Route::get ('my_zan/{user}','UserController@myZan')->name ('my_zan');
+	//我的所有通知
+	Route::get ('notify/{user}','NotifyController@index')->name ('notify');
+	////标记已读
+	Route::get ('notify/show/{notify}','NotifyController@show')->name ('notify.show');
 });
 //用户管理
 //注册页面
