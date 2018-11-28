@@ -4,9 +4,23 @@ namespace App\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
+	////引入 trait 类
+	use LogsActivity,Searchable;
+	protected $fillable = ['title', 'content','id'];
+	//设置记录动态的属性
+//	protected static $logAttributes = ['name', 'text'];
+
+//如果需要记录所有$fillable设置的填充属性，可以使用
+	protected static $logFillable = true;
+	protected static $recordEvents = ['created','updated'];
+	//自定义日志名称
+	protected static $logName = 'article';
+
 	//定义文章与用户的关联
 	public function user(){
 		return $this->belongsTo (User::class);

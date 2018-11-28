@@ -43,11 +43,11 @@
                                                         <!-- Content -->
                                                         <div class="small text-muted">
                                                             @if($notification->read_at)
-                                                            <p class="btn btn-sm btn-primary">已读</p>
+                                                            <p class="btn btn-sm btn-white">已读</p>
                                                             <strong class="text-body">{{$notification['data']['user_name']}}</strong> 评论了
                                                             <strong class="text-body">{{$notification['data']['article_title']}}</strong>
                                                                 @else
-                                                                <p class="btn btn-sm btn-primary">未读</p>
+                                                                <p class="btn btn-sm btn-white">未读</p>
                                                                 <strong class="text-body">{{$notification['data']['user_name']}}</strong> 评论了
                                                                 <strong class="text-body">{{$notification['data']['article_title']}}</strong>
                                                             @endif

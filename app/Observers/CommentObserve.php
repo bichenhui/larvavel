@@ -16,9 +16,12 @@ class CommentObserve
     public function created(Comment $comment)
     {
 		//具体评论数据
-//		dd (2);
+
 		//发送通知
-		$comment->article->user->notify(new CommentNotify($comment));
+		if ($comment->article->user->id !=auth ()->id ()){
+			$comment->article->user->notify(new CommentNotify($comment));
+		}
+
     }
 
     /**

@@ -37,221 +37,22 @@
         </a>
 
         <!-- Form -->
-        <form class="form-inline mr-4 d-none d-lg-flex">
+        <form class="form-inline mr-4 d-none d-lg-flex" action="{{route ('home.search')}}">
             <div class="input-group input-group-rounded input-group-merge" data-toggle="lists" data-lists-values='["name"]'>
 
                 <!-- Input -->
-                <input type="search" class="form-control form-control-prepended  dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+                <input type="text" name="wd" class="form-control form-control-prepended  dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
                         <i class="fe fe-search"></i>
                     </div>
                 </div>
 
-                <!-- Menu -->
-                <div class="dropdown-menu dropdown-menu-card">
-                    <div class="card-body">
 
-                        <!-- List group -->
-                        <div class="list-group list-group-flush list my--3">
-                            <a href="team-overview.html" class="list-group-item px-0">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Airbnb
-                                        </h4>
-
-                                        <!-- Time -->
-                                        <p class="small text-muted mb-0">
-                                            <span class="fe fe-clock"></span>
-                                            <time datetime="2018-05-24">Updated 2hr ago</time>
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-                            </a>
-                            <a href="team-overview.html" class="list-group-item px-0">
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Medium Corporation
-                                        </h4>
-
-                                        <!-- Time -->
-                                        <p class="small text-muted mb-0">
-                                            <span class="fe fe-clock"></span>
-                                            <time datetime="2018-05-24">Updated 2hr ago</time>
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-                            </a>
-                            <a href="project-overview.html" class="list-group-item px-0">
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-4by3">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Homepage Redesign
-                                        </h4>
-
-                                        <!-- Time -->
-                                        <p class="small text-muted mb-0">
-                                            <span class="fe fe-clock"></span>
-                                            <time datetime="2018-05-24">Updated 4hr ago</time>
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-
-                            </a>
-                            <a href="project-overview.html" class="list-group-item px-0">
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-4by3">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Travels & Time
-                                        </h4>
-
-                                        <!-- Time -->
-                                        <p class="small text-muted mb-0">
-                                            <span class="fe fe-clock"></span>
-                                            <time datetime="2018-05-24">Updated 4hr ago</time>
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-
-                            </a>
-                            <a href="project-overview.html" class="list-group-item px-0">
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-4by3">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Safari Exploration
-                                        </h4>
-
-                                        <!-- Time -->
-                                        <p class="small text-muted mb-0">
-                                            <span class="fe fe-clock"></span>
-                                            <time datetime="2018-05-24">Updated 4hr ago</time>
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-
-                            </a>
-                            <a href="profile-posts.html" class="list-group-item px-0">
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Dianna Smiley
-                                        </h4>
-
-                                        <!-- Status -->
-                                        <p class="text-body small mb-0">
-                                            <span class="text-success">●</span> Online
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-
-                            </a>
-                            <a href="profile-posts.html" class="list-group-item px-0">
-
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-
-                                        <!-- Avatar -->
-                                        <div class="avatar">
-                                            <img src="{{asset('org/Dashkit-1.1.2/assets')}}/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                                        </div>
-
-                                    </div>
-                                    <div class="col ml--2">
-
-                                        <!-- Title -->
-                                        <h4 class="text-body mb-1 name">
-                                            Ab Hadley
-                                        </h4>
-
-                                        <!-- Status -->
-                                        <p class="text-body small mb-0">
-                                            <span class="text-danger">●</span> Offline
-                                        </p>
-
-                                    </div>
-                                </div> <!-- / .row -->
-
-                            </a>
-                        </div>
-
-                    </div>
-                </div> <!-- / .dropdown-menu -->
 
             </div>
         </form>
-
+    {{--{{dd(auth()->user()->unreadNotifications())}}--}}
         <!-- User -->
         <div class="navbar-user">
             <!-- Dropdown -->
@@ -260,7 +61,7 @@
 
                 <!-- Toggle -->
                 <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="icon active @if(auth ()->user ()->unreadNotifications()->count()!=0) active @endif">
+              <span class="icon  @if(auth()->user()->unreadNotifications()->count()!=0) active @endif">
                 <i class="fe fe-bell"></i>
               </span>
                 </a>
@@ -273,7 +74,8 @@
 
                                 <!-- Title -->
                                 <h5 class="card-header-title">
-                                    通知
+
+                                    通知({{auth ()->user ()->unreadNotifications()->count()}})
                                 </h5>
 
                             </div>
@@ -291,6 +93,7 @@
 
                         <!-- List group -->
                         <div class="list-group list-group-flush my--3">
+                            @if(auth ()->user ()->unreadNotifications()->count()!=0)
                             @foreach(auth ()->user ()->unreadNotifications()->limit(3)->get() as $notification)
                             <a class="list-group-item px-0" href="{{route ('member.notify.show',$notification)}}">
 
@@ -323,6 +126,9 @@
 
                             </a>
                            @endforeach
+                                @else
+                                <p class="text-muted text-center">暂无通知</p>
+                            @endif
                         </div>
 
                     </div>
@@ -378,19 +184,6 @@
                     <a class="nav-link" href="/">
                         首页
                     </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#!" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Pages
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="topnavPages">
-                        <li>
-                            <a class="dropdown-item" href="orders.html">
-                                Orders
-                            </a>
-                        </li>
-
-                    </ul>
                 </li>
                 <li class="nav-item ">
                     <a href="{{route ('home.article.index')}}" class="nav-link" href="">文章列表</a>

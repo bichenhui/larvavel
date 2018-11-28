@@ -3,7 +3,7 @@
 
         <!-- Comments -->
 
-        <div class="comment mb-3" v-for="v in comments">
+        <div class="comment mb-3" v-for="v in comments" :id="'comment'+v.id">
             <div class="row">
                 <div class="col-auto">
 
@@ -92,6 +92,8 @@
                         hljs.highlightBlock(block);
                     });
                 });
+                //滚动页面
+                hdjs.scrollTo('body',location.hash,1000, {queue:true});
             },
                 methods:{
                     @auth()

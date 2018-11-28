@@ -5,6 +5,7 @@ namespace App;
 use App\Models\Attachment;
 use App\Models\Collect;
 use App\Models\Zan;
+use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -30,6 +31,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    //重写 排序
+	public function notifications()
+	{
+		return $this->morphMany(DatabaseNotification::class, 'notifiable')->orderBy('read_at', 'asc')->orderBy('created_at', 'desc');
+	}
+    //icon
     public function getIconAttribute($key){
     	return $key?:asset ('org/images/user.jpg');
 	}

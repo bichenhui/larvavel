@@ -30,6 +30,7 @@ Route::group (['prefix'=>'home','namespace'=>'Home','as'=>'home.'],function (){
 	Route::get ('zan/make','ZanColltroller@make')->name ('zan.make');
 	//收藏 取消收藏
 	Route::get ('collect/make','CollectController@make')->name ('collect.make');
+	Route::get ('search','HomeController@search')->name ('search');
 });
 //会员中心
 Route::group (['prefix'=>'member','namespace'=>'Member','as'=>'member.'],function (){

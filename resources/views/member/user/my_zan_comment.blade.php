@@ -108,7 +108,7 @@
                                 </div>
                             </div>
 
-
+                            {{--{{$zansData->appends(['type'=>Request::query ('type')])->links()}}--}}
 
                             {{$zansData->appends(['type'=>Request::query('type')])->links()}}
                         </div>
