@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index(){
 //    	dd (1);
 //		Activity::all();
-		$actives=Activity::latest()->paginate(10);;
+		$actives=Activity::latest()->paginate(4);;
 //		dd ($actives);
     	return view ('home.index',compact ('actives'));
 	}

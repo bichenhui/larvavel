@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-4">
                 <!-- Files -->
+                @auth()
                 <div class="card" data-toggle="lists" data-lists-values="[&quot;name&quot;]">
                     <div class="card-header">
                         <div class="row align-items-center">
@@ -11,7 +12,7 @@
 
                                 <!-- Title -->
                                 <h4 class="card-header-title">
-                                    动态
+                                    动态({{$actives->count()}})
                                 </h4>
 
                             </div>
@@ -21,8 +22,9 @@
                     <div class="card-body">
 
                         <!-- List group -->
-                        <div class="list-group list-group-flush my--3">
-                            @if(auth ()->user ()->unreadNotifications()->count()!=0)
+
+                            <div class="list-group list-group-flush my--3">
+                                @if($actives->count()!=0)
                                 @foreach($actives as $active)
                                     @if($active['log_name']=='article')
                                         @include('home.layouts._article')
@@ -30,16 +32,16 @@
                                         @include('home.layouts._comment')
                                     @endif
                                 @endforeach
-                            @else
+                                @else
                                 <p class="text-muted text-center">暂无评论</p>
-                            @endif
-                        </div>
+                                @endif
+                            </div>
 
                     </div>
                     <!-- List -->
 
                 </div>
-
+                @endauth
                 {{$actives->links()}}
 
             </div>
@@ -53,7 +55,8 @@
 
                                 <!-- Avatar -->
                                 <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."
+                                         class="avatar-img rounded-circle">
                                 </a>
 
                             </div>
@@ -87,7 +90,8 @@
 
                                 <!-- Dropdown -->
                                 <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
                                         <i class="fe fe-more-vertical"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -116,7 +120,8 @@
 
                                 <!-- Avatar -->
                                 <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."
+                                         class="avatar-img rounded-circle">
                                 </a>
 
                             </div>
@@ -150,7 +155,8 @@
 
                                 <!-- Dropdown -->
                                 <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
                                         <i class="fe fe-more-vertical"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -179,7 +185,8 @@
 
                                 <!-- Avatar -->
                                 <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..."
+                                         class="avatar-img rounded-circle">
                                 </a>
 
                             </div>
@@ -213,7 +220,8 @@
 
                                 <!-- Dropdown -->
                                 <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
                                         <i class="fe fe-more-vertical"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -242,7 +250,8 @@
 
                                 <!-- Avatar -->
                                 <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..."
+                                         class="avatar-img rounded-circle">
                                 </a>
 
                             </div>
@@ -276,7 +285,8 @@
 
                                 <!-- Dropdown -->
                                 <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
                                         <i class="fe fe-more-vertical"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
@@ -305,7 +315,8 @@
 
                                 <!-- Avatar -->
                                 <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                                    <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..."
+                                         class="avatar-img rounded-circle">
                                 </a>
 
                             </div>
@@ -339,7 +350,8 @@
 
                                 <!-- Dropdown -->
                                 <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
                                         <i class="fe fe-more-vertical"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
