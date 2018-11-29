@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-4">
                 <!-- Files -->
-                @auth()
+                {{--@auth()--}}
                 <div class="card" data-toggle="lists" data-lists-values="[&quot;name&quot;]">
                     <div class="card-header">
                         <div class="row align-items-center">
@@ -41,7 +41,7 @@
                     <!-- List -->
 
                 </div>
-                @endauth
+                {{--@endauth--}}
                 {{$actives->links()}}
 
             </div>

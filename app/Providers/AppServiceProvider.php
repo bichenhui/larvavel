@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Models\Comment;
+use App\Models\Config;
 use App\Observers\CommentObserve;
+use App\Observers\ConfigObserve;
 use App\Observers\UserObserver;
 use App\User;
 use Carbon\Carbon;
@@ -24,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
 		//注册观察者
 		User::observe (UserObserver::class);
 		Comment::observe (CommentObserve::class);
+		Config::observe (ConfigObserve::class);
 
 	}
 

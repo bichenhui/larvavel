@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/css/theme.min.css">
     @stack('css')
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>欢迎您进来学习</title>
+    <title>{{hd_config ('base.title')}}</title>
 </head>
 <body>
 
@@ -41,7 +41,7 @@
             <div class="input-group input-group-rounded input-group-merge" data-toggle="lists" data-lists-values='["name"]'>
 
                 <!-- Input -->
-                <input type="text" name="wd" class="form-control form-control-prepended  dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+                <input type="text" name="wd" class="form-control form-control-prepended  dropdown-toggle search" data-toggle="dropdown" placeholder="快来点我" aria-label="Search">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
                         <i class="fe fe-search"></i>

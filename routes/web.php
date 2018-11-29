@@ -86,4 +86,7 @@ Route::group (['middleware'=>['admin.auth'],'prefix'=>'admin','namespace'=>'Admi
 	//创建控制器制定模型
 	//artisan make:controller --model=Models/Category  Admin/CategoryController
 		Route::resource ('category','CategoryController');
+		//配置项
+	Route::get ('config/edit/{name}','ConfigController@edit')->name ('config.edit');
+	Route::post ('config/update/{name}','ConfigController@update')->name ('config.update');
 });

@@ -16,7 +16,7 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/css/theme.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Dashkit</title>
+    <title>{{hd_config ('base.title')}}</title>
 </head>
 <body class="d-flex align-items-center bg-white border-top-2 border-primary">
 
@@ -122,7 +122,7 @@
             //后台链接
             url: '{{route ('util.code.send')}}',
             //验证码等待发送时间
-            timeout: 10,
+            timeout: '{{hd_config ('code.code_expires')}}',
             //表单，手机号或邮箱的INPUT表单
             input: '[name="email"]'
         };

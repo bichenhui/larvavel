@@ -15,7 +15,7 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/assets')}}/css/theme.min.css">
 
-    <title>后台管理</title>
+    <title>{{hd_config ('base.title')}}</title>
 </head>
 <body>
 
@@ -76,14 +76,14 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="{{route('admin.index')}}">
-                        <i class="fe fe-home"></i> 学习11
+                        <i class="fe fe-home"></i> 学习
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">
                         <i class="fe fe-file"></i> 文章系统
                     </a>
-                    <div class="collapse show" id="sidebarPages">
+                    <div class="collapse " id="sidebarPages">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a href="{{route('admin.category.index')}}" class="nav-link" >
@@ -91,7 +91,46 @@
                                 </a>
                             </li>
                         </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                        <i class="fe fe-layout"></i> 网站配置
+                    </a>
+                    <div class="collapse show" id="sidebarLayouts">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{route ('admin.config.edit',['name'=>'base'])}}" class="nav-link">
+                                    基本配置
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route ('admin.config.edit',['name'=>'update'])}}" class="nav-link">
+                                    上传配置
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route ('admin.config.edit',['name'=>'mail'])}}" class="nav-link">
+                                    邮件配置
+                                </a>
+                            </li><li class="nav-item">
+                                <a href="{{route ('admin.config.edit',['name'=>'wechat'])}}" class="nav-link">
+                                    微信配置
+                                </a>
+                            </li><li class="nav-item">
+                                <a href="{{route ('admin.config.edit',['name'=>'code'])}}" class="nav-link">
+                                    验证码配置
+                                </a>
+                            </li><li class="nav-item">
+                                <a href="{{route ('admin.config.edit',['name'=>'search'])}}" class="nav-link">
+                                    搜索配置
+                                </a>
+                            </li>
+
+
+
+                        </ul>
                     </div>
+                </li>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
@@ -108,20 +147,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
-                        <i class="fe fe-layout"></i> Layouts
-                    </a>
-                    <div class="collapse show" id="sidebarLayouts">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link">
-                                    Sidenav
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+
                 <li class="nav-item d-md-none">
                     <a class="nav-link" href="#sidebarModalActivity" data-toggle="modal">
                         <span class="fe fe-bell"></span> Notifications

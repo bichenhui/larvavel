@@ -9,6 +9,7 @@ use Spatie\Activitylog\Models\Activity;
 
 class HomeController extends Controller
 {
+	//首页动态
     public function index(){
 //    	dd (1);
 //		Activity::all();
@@ -16,6 +17,7 @@ class HomeController extends Controller
 //		dd ($actives);
     	return view ('home.index',compact ('actives'));
 	}
+	//搜索框
 	public function search(Request $request){
 //		dd ($request);
 		//搜索关键词
