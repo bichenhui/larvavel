@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/quill/dist/quill.core.css">
     <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/libs/flatpickr/dist/flatpickr.min.css">
+    {{--<link href="{{asset ('org/css/zzsc.css')}}" rel="stylesheet" type="text/css">--}}
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{asset ('org/Dashkit-1.1.2/assets')}}/css/theme.min.css">
@@ -209,5 +210,6 @@
 @include('layouts.message')
 <!-- Theme JS -->
 @stack('js')
+
 </body>
 </html>

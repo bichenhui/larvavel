@@ -89,4 +89,18 @@ Route::group (['middleware'=>['admin.auth'],'prefix'=>'admin','namespace'=>'Admi
 		//配置项
 	Route::get ('config/edit/{name}','ConfigController@edit')->name ('config.edit');
 	Route::post ('config/update/{name}','ConfigController@update')->name ('config.update');
+
 });
+
+Route::resource ('photo','Photo\PhotoController');
+//微信管理
+
+	Route::group (['prefix'=>'wechat','namespace'=>'Wechat','as'=>'wechat.'],function(){
+		//菜单管理
+		Route::resource ('button','ButtonController');
+		Route::get ('button/push/{button}','ButtonController@push')->name ('button.push');
+		Route::get ('api/handler','ApiController@handler')->name ('api.handler');
+	});
+
+
+

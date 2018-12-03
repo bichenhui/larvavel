@@ -32,7 +32,7 @@ class CategoryRequest extends FormRequest
 //		dd ($id);
         return [
             'title'=>'required|unique:categories,title,'.$id,
-			'icon'=>'required'
+
         ];
     }
     public function messages ()
@@ -40,7 +40,7 @@ class CategoryRequest extends FormRequest
 		return [
 			'title.required'=>'请输入栏目名称',
 			'title.unique'=>'栏目已存在',
-			'icon.required'=>'请输入栏目图标'
+
 		];
 	}
 }

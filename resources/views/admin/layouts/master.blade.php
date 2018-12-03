@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="csrf-token" content="{{csrf_token()}}">
 
     <!-- Libs CSS -->
     <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/assets')}}/fonts/feather/feather.min.css">
@@ -14,7 +15,7 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{asset('org/Dashkit-1.1.2/assets')}}/css/theme.min.css">
-
+    @stack('css');
     <title>{{hd_config ('base.title')}}</title>
 </head>
 <body>
@@ -25,7 +26,8 @@
     <div class="container-fluid">
 
         <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse"
+                aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -42,7 +44,8 @@
             <div class="dropdown">
 
                 <!-- Toggle -->
-                <a href="{{route('home')}}" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="{{route('home')}}" id="sidebarIcon" class="dropdown-toggle" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-sm avatar-online">
                         <img src="{{asset('org/images/front-logo.png')}}" class="avatar-img rounded-circle" alt="...">
                     </div>
@@ -63,7 +66,8 @@
             <!-- Form -->
             <form class="mt-4 mb-3 d-md-none">
                 <div class="input-group input-group-rounded input-group-merge">
-                    <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+                    <input type="search" class="form-control form-control-rounded form-control-prepended"
+                           placeholder="Search" aria-label="Search">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
                             <span class="fe fe-search"></span>
@@ -80,19 +84,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">
+                    <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false"
+                       aria-controls="sidebarPages">
                         <i class="fe fe-file"></i> 文章系统
                     </a>
                     <div class="collapse " id="sidebarPages">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{route('admin.category.index')}}" class="nav-link" >
+                                <a href="{{route('admin.category.index')}}" class="nav-link">
                                     栏目管理
                                 </a>
                             </li>
                         </ul>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                    <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="fe fe-layout"></i> 网站配置
                     </a>
                     <div class="collapse show" id="sidebarLayouts">
@@ -111,35 +117,55 @@
                                 <a href="{{route ('admin.config.edit',['name'=>'mail'])}}" class="nav-link">
                                     邮件配置
                                 </a>
-                            </li><li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{route ('admin.config.edit',['name'=>'wechat'])}}" class="nav-link">
                                     微信配置
                                 </a>
-                            </li><li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{route ('admin.config.edit',['name'=>'code'])}}" class="nav-link">
                                     验证码配置
                                 </a>
-                            </li><li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a href="{{route ('admin.config.edit',['name'=>'search'])}}" class="nav-link">
                                     搜索配置
                                 </a>
                             </li>
-
-
-
+                            <li class="nav-item">
+                                <a href="{{route ('photo.index')}}" class="nav-link">
+                                    轮播图配置
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
+                <a class="nav-link" href="#sidebarWechat" data-toggle="collapse" role="button" aria-expanded="false"
+                   aria-controls="sidebarAuth">
+                    <i class="fe fe-message-square"></i> 微信管理
+                </a>
+                <div class="collapse show" id="sidebarWechat">
+                    <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                            <a href="{{route ('wechat.button.index')}}" class="nav-link">
+                                微信菜单
+                            </a>
 
+                        </li>
+                    </ul>
+                </div>
+                </li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
+                    <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false"
+                       aria-controls="sidebarAuth">
                         <i class="fe fe-user"></i> Authentication
                     </a>
                     <div class="collapse show" id="sidebarAuth">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#sidebarSignIn" class="nav-link" >
+                                <a href="#sidebarSignIn" class="nav-link">
                                     Sign in
                                 </a>
 
@@ -171,7 +197,8 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
+                    <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button"
+                       aria-expanded="false" aria-controls="sidebarComponents">
                         <i class="fe fe-book-open"></i> Components
                     </a>
                     <div class="collapse " id="sidebarComponents">
@@ -317,7 +344,8 @@
                 <!-- Dropup -->
                 <div class="dropup">
                     <!-- Toggle -->
-                    <a href="" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
                         <div class="avatar avatar-sm avatar-online">
                             <img src="{{auth()->user()->icon}}" class="avatar-img rounded-circle" alt="...">
                         </div>
@@ -327,7 +355,6 @@
                         <a href="{{route('logout')}}" class="dropdown-item">注销登录</a>
                     </div>
                 </div>
-
 
 
             </div>
@@ -341,7 +368,7 @@
 ================================================== -->
 <div class="main-content">
     {{--表示继承占位--}}
-   @yield('content')
+    @yield('content')
 </div>
 
 <!-- JAVASCRIPT

@@ -45,334 +45,55 @@
                 {{$actives->links()}}
 
             </div>
-            <div class="col-12 col-xl-8">
-
-                <!-- Card -->
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-auto">
-
-                                <!-- Avatar -->
-                                <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."
-                                         class="avatar-img rounded-circle">
-                                </a>
-
-                            </div>
-                            <div class="col ml--2">
-
-                                <!-- Title -->
-                                <h4 class="card-title mb-1">
-                                    <a href="profile-posts.html">Dianna Smiley</a>
-                                </h4>
-
-                                <!-- Text -->
-                                <p class="card-text small text-muted mb-1">
-                                    You either die Spongebob or you live long enough to...
-                                </p>
-
-                                <!-- Status -->
-                                <p class="card-text small">
-                                    <span class="text-success">●</span> Online
-                                </p>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Button -->
-                                <a href="#!" class="btn btn-sm btn-primary d-none d-md-inline-block">
-                                    Subscribe
-                                </a>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Dropdown -->
-                                <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                                        <i class="fe fe-more-vertical"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="#!" class="dropdown-item">
-                                            Action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Another action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Something else here
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- / .row -->
-                    </div> <!-- / .card-body -->
+            <div class="col-8">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{asset ('org/images')}}/1.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{asset ('org/images')}}/2.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{asset ('org/images')}}/t01ad48eb0945669efd.jpg">
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-
-                <!-- Card -->
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-auto">
-
-                                <!-- Avatar -->
-                                <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."
-                                         class="avatar-img rounded-circle">
-                                </a>
-
-                            </div>
-                            <div class="col ml--2">
-
-                                <!-- Title -->
-                                <h4 class="card-title mb-1">
-                                    <a href="profile-posts.html">Ab Hadley</a>
-                                </h4>
-
-                                <!-- Text -->
-                                <p class="card-text small text-muted mb-1">
-                                    Working on the latest API integration.
-                                </p>
-
-                                <!-- Status -->
-                                <p class="card-text small">
-                                    <span class="text-success">●</span> Online
-                                </p>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Button -->
-                                <a href="#!" class="btn btn-sm btn-primary d-none d-md-inline-block">
-                                    Subscribe
-                                </a>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Dropdown -->
-                                <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                                        <i class="fe fe-more-vertical"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="#!" class="dropdown-item">
-                                            Action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Another action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Something else here
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- / .row -->
-                    </div> <!-- / .card-body -->
-                </div>
-
-                <!-- Card -->
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-auto">
-
-                                <!-- Avatar -->
-                                <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..."
-                                         class="avatar-img rounded-circle">
-                                </a>
-
-                            </div>
-                            <div class="col ml--2">
-
-                                <!-- Title -->
-                                <h4 class="card-title mb-1">
-                                    <a href="profile-posts.html">Adolfo Hess</a>
-                                </h4>
-
-                                <!-- Text -->
-                                <p class="card-text small text-muted mb-1">
-                                    Vactioning with the fam
-                                </p>
-
-                                <!-- Status -->
-                                <p class="card-text small">
-                                    <span class="text-success">●</span> Online
-                                </p>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Button -->
-                                <a href="#!" class="btn btn-sm btn-primary d-none d-md-inline-block">
-                                    Subscribe
-                                </a>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Dropdown -->
-                                <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                                        <i class="fe fe-more-vertical"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="#!" class="dropdown-item">
-                                            Action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Another action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Something else here
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- / .row -->
-                    </div> <!-- / .card-body -->
-                </div>
-
-                <!-- Card -->
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-auto">
-
-                                <!-- Avatar -->
-                                <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..."
-                                         class="avatar-img rounded-circle">
-                                </a>
-
-                            </div>
-                            <div class="col ml--2">
-
-                                <!-- Title -->
-                                <h4 class="card-title mb-1">
-                                    <a href="profile-posts.html">Daniela Dewitt</a>
-                                </h4>
-
-                                <!-- Text -->
-                                <p class="card-text small text-muted mb-1">
-                                    Arts District project management stuff.
-                                </p>
-
-                                <!-- Status -->
-                                <p class="card-text small">
-                                    <span class="text-warning">●</span> Busy
-                                </p>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Button -->
-                                <a href="#!" class="btn btn-sm btn-primary d-none d-md-inline-block">
-                                    Subscribe
-                                </a>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Dropdown -->
-                                <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                                        <i class="fe fe-more-vertical"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="#!" class="dropdown-item">
-                                            Action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Another action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Something else here
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- / .row -->
-                    </div> <!-- / .card-body -->
-                </div>
-
-                <!-- Card -->
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-auto">
-
-                                <!-- Avatar -->
-                                <a href="profile-posts.html" class="avatar avatar-lg">
-                                    <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..."
-                                         class="avatar-img rounded-circle">
-                                </a>
-
-                            </div>
-                            <div class="col ml--2">
-
-                                <!-- Title -->
-                                <h4 class="card-title mb-1">
-                                    <a href="profile-posts.html">Miyah Myles</a>
-                                </h4>
-
-                                <!-- Text -->
-                                <p class="card-text small text-muted mb-1">
-                                    You either die Spongbob...or become Squidward
-                                </p>
-
-                                <!-- Status -->
-                                <p class="card-text small">
-                                    <span class="text-danger">●</span> Offline
-                                </p>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Button -->
-                                <a href="#!" class="btn btn-sm btn-primary d-none d-md-inline-block">
-                                    Subscribe
-                                </a>
-
-                            </div>
-                            <div class="col-auto">
-
-                                <!-- Dropdown -->
-                                <div class="dropdown">
-                                    <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button"
-                                       data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                                        <i class="fe fe-more-vertical"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="#!" class="dropdown-item">
-                                            Action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Another action
-                                        </a>
-                                        <a href="#!" class="dropdown-item">
-                                            Something else here
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div> <!-- / .row -->
-                    </div> <!-- / .card-body -->
-                </div>
-
             </div>
         </div>
     </div>
 @endsection
+@push('js')
+    <style>
+        .swiper-container {
+            width: 800px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        require(['hdjs'], function (hdjs) {
+            hdjs.swiper('.swiper-container', {
+                loop: true,
+                //自动轮换
+                autoplay: {
+                    delay: 1000,
+                },
+                //如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                //如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        })
+    </script>
+   @endpush
