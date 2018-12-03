@@ -100,6 +100,7 @@ Route::resource ('photo','Photo\PhotoController');
 		Route::resource ('button','ButtonController');
 		Route::get ('button/push/{button}','ButtonController@push')->name ('button.push');
 		Route::get ('api/handler','ApiController@handler')->name ('api.handler');
+		Route::resource ('respones_text','ResponesTextController');
 	});
 
 

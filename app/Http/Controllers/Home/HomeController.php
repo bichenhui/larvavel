@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 use Spatie\Activitylog\Models\Activity;
 
@@ -13,9 +14,10 @@ class HomeController extends Controller
     public function index(){
 //    	dd (1);
 //		Activity::all();
+		$photos=Photo::all ();
 		$actives=Activity::latest()->paginate(4);;
 //		dd ($actives);
-    	return view ('home.index',compact ('actives'));
+    	return view ('home.index',compact ('actives','photos'));
 	}
 	//搜索框
 	public function search(Request $request){

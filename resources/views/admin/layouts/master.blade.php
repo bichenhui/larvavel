@@ -153,6 +153,12 @@
                             </a>
 
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route ('wechat.respones_text.index')}}" class="nav-link">
+                                文本回复
+                            </a>
+
+                        </li>
                     </ul>
                 </div>
                 </li>

@@ -48,15 +48,11 @@
             <div class="col-8">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
+                        @foreach($photos as $photo)
                         <div class="swiper-slide">
-                            <img src="{{asset ('org/images')}}/1.jpg">
+                            <img src="{{asset ($photo->image)}}">
                         </div>
-                        <div class="swiper-slide">
-                            <img src="{{asset ('org/images')}}/2.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{{asset ('org/images')}}/t01ad48eb0945669efd.jpg">
-                        </div>
+                        @endforeach
                     </div>
                     <!-- 如果需要分页器 -->
                     <div class="swiper-pagination"></div>
