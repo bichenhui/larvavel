@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div style="display: inline-block;position: relative;">
-                                    <img src="../image/nopic.jpg" class="img-responsive img-thumbnail" width="150">
+                                    <img src="{{asset ('org/hdjs/image/nopic.jpg')}}" class="img-responsive img-thumbnail" width="150">
                                     <em class="close" style="position: absolute;top: 3px;right: 8px;" title="删除这张图片"
                                         onclick="removeImg(this)">×</em>
                                 </div>

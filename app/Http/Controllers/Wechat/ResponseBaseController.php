@@ -38,7 +38,9 @@ class ResponseBaseController extends Controller
     public function store(Request $request)
     {
 		$responseBase = ResponseBase::firstOrNew(['id'=>1]);
+
 		$responseBase['data'] = $request->all();
+//		dd ($responseBase['data']);
 		$responseBase->save();
 		return back()->with('success','操作成功');
     }

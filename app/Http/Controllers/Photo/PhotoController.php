@@ -28,11 +28,22 @@ class PhotoController extends Controller
     public function store(Request $request)
     {
 //dd ($request->all ());
+		//验证规则  不能为空 否则会出现报错
+		$this->validate ($request,[
+			'title'=>'required'
+		],[
+			'title.required'=>'不能为空，请输入标题'
+		]);
         Photo::create($request->all ());
         return redirect ()->route ('photo.index')->with ('succes','上传成功');
     }
 	public function update(Request $request, Photo $photo)
 	{
+		$this->validate ($request,[
+			'title'=>'required'
+		],[
+							 'title.required'=>'不能为空，请输入标题'
+						 ]);
 		$photo->update ($request->all ());
 		return redirect()->route ('photo.index')->with ('success','菜单更新成功');
 	}

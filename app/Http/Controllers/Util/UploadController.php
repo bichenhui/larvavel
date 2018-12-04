@@ -50,8 +50,9 @@ class UploadController extends Controller
 	//验证上传类型
 	//getClientOriginalExtension  获取文件的扩展名
 	private function checkType($file){
-    	if (!in_array (strtolower ($file->getClientOriginalExtension()),['jpg','png'])){
+    	if (!in_array (strtolower ($file->getClientOriginalExtension()),explode('|',hd_config('update.type')))){
 			//return  ['message' =>'类型不允许', 'code' => 403];
+			//dd (hd_config('update.type'));
 //			dd (hd_config('upload.type'));
 			throw new UploadException('文件类型不符');
 
