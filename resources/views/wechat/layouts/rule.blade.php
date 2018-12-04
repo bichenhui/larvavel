@@ -31,7 +31,7 @@
             new Vue({
                 el:'#rule',
                 data:{
-                    rule:{!! json_encode($ruleData) !!}
+                    rule:{!! json_encode($ruleData) !!},
                     // rule:{
                         // name:'',
                         // keywords:[],

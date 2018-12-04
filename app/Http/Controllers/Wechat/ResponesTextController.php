@@ -10,11 +10,12 @@ use DB;
 
 class ResponesTextController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+	public function __construct()
+	{
+//		$this->middleware('admin.auth',[
+//			'except'=>[],
+//		]);
+	}
     public function index()
     {
 		//读取所有回复
@@ -44,7 +45,7 @@ class ResponesTextController extends Controller
 //    	dd ($request->all ());
 		//开启事务
 		DB::beginTransaction();
-		$rule=$wechatService->ruleStore () ;
+		$rule=$wechatService->ruleStore ('text') ;
 		//添加回复内容
 		ResponesText::create ([
 			'content'=>$request['data'],
@@ -56,17 +57,7 @@ class ResponesTextController extends Controller
     }
 
     /**
-     * Display the specified resource.
      *
-     * @param  \App\Models\ResponesText  $responesText
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ResponesText $responesText)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\ResponesText  $responesText
@@ -74,10 +65,10 @@ class ResponesTextController extends Controller
      */
     public function edit(ResponesText $responesText,WechatService $wechatService)
     {
-//    		dd ($responseText);
+//    		dd ($responesText);
 		$ruleView=$wechatService->ruleView ($responesText['rule_id']);
 		//获取回复内容的旧数据
-//        dd($responseText);
+//        dd($responesText);
 		return view ('wechat.response_text.edit',compact ('ruleView','responesText'));
     }
 

@@ -21,13 +21,13 @@
                         <ul class="nav nav-tabs nav-overflow header-tabs">
                             <li class="nav-item">
                                 <a href="{{route('wechat.respones_text.index')}}" class="nav-link ">
-                                    列表
+                                   文本列表
                                 </a>
 
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('wechat.respones_text.create')}}" class="nav-link active">
-                                    添加回复
+                                    添加 回复
                                 </a>
                             </li>
                         </ul>

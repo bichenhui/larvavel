@@ -51,23 +51,23 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form method="post" action="{{route('photo.index',$photo)}}">
-                            @csrf
+                        <form method="post" action="{{route('photo.update',$photo)}}">
+                            @csrf  @method('PUT')
                             <div class="form-group">
                                 <label for="exampleInputEmail1">轮播图标题</label>
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="">
+                                <input type="text" value="{{$photo->title}}" name="title" class="form-control" id="exampleInputEmail1" placeholder="">
                             </div>
 
                             <label for="exampleInputEmail1">轮播图图标</label>
                             <div class="col-sm-8">
                                 <div class="input-group mb-1">
-                                    <input class="form-control  " name="thumb" readonly="" value="">
+                                    <input class="form-control" name="thumb" readonly="" value="">
                                     <div class="input-group-append">
                                         <button onclick="upImagePc(this)" class="btn btn-secondary" type="button">单图上传</button>
                                     </div>
                                 </div>
                                 <div style="display: inline-block;position: relative;">
-                                    <img src="../image/nopic.jpg" class="img-responsive img-thumbnail" width="150">
+                                    <img src="{{asset('org/hdjs/image/nopic.jpg')}}" class="img-responsive img-thumbnail" width="150">
                                     <em class="close" style="position: absolute;top: 3px;right: 8px;" title="删除这张图片"
                                         onclick="removeImg(this)">×</em>
                                 </div>

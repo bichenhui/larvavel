@@ -11,10 +11,10 @@ class WechatService{
 	public function __construct ()
 	{
       //微信通信绑定
-//		$config=config('hd_wechat');
-////		dd ($config);
-//		WeChat::config ($config);
-//		WeChat::valid();
+		$config=config('hd_wechat');
+//		dd ($config);
+		WeChat::config ($config);
+		WeChat::valid();
 	}
 	//加载规则试图文件
 	public function ruleView($rule_id=0){
@@ -25,10 +25,11 @@ class WechatService{
 			'name'=>$rule ? $rule['name'] : '',
 			'keywords'=>$rule ? $rule->keyword()->select('key')->get()->toArray():[],
 		];
+//		dd ($ruleData);
 		return view ('wechat.layouts.rule',compact ('ruleData'));
 	}
 	//添加数据
-	public function ruleStore(){
+	public function ruleStore($type){
 //		dd (request ()->all ());
 		$post=request ()->all ();
 //		dd ($post);
@@ -45,7 +46,7 @@ class WechatService{
 			'name.required'=>'规则名不能为空'
 		])->validate ();
 		//添加数据库
-		$ruleModel=Rule::create (['name'=>$rule['name']]);
+		$ruleModel=Rule::create (['name'=>$rule['name'],'type'=>$type]);
 //		dd ($ruleModel);
 		//关键词表添加
 		foreach ($rule['keywords'] as $value){

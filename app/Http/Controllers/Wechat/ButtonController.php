@@ -42,6 +42,8 @@ class ButtonController extends Controller
     public function update(Request $request, Button $button)
     {
         $button->update ($request->all ());
+		$data['status'] = 0;
+		$button->update($data);
         return redirect()->route ('wechat.button.index')->with ('success','菜单更新成功');
     }
 

@@ -99,8 +99,14 @@ Route::resource ('photo','Photo\PhotoController');
 		//菜单管理
 		Route::resource ('button','ButtonController');
 		Route::get ('button/push/{button}','ButtonController@push')->name ('button.push');
-		Route::get ('api/handler','ApiController@handler')->name ('api.handler');
+		//微信管理
+		Route::any ('api/handler','ApiController@handler')->name ('api.handler');
+		//文本回复
 		Route::resource ('respones_text','ResponesTextController');
+		//图文回复
+		Route::resource ('response_news','ResponseNewsController');
+		//基本回复  关注回复以及默认回复
+		Route::resource ('response_base','ResponseBaseController');
 	});
 
 

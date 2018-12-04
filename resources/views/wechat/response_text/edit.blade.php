@@ -74,9 +74,9 @@
             new Vue({
                 el:'#keyword',
                 data:{
-                    contents:[
-                        {content:''}
-                    ]
+
+                        contents:{!! $responesText['content'] !!}
+
                 },
                 mounted(){
                     this.emotion()
