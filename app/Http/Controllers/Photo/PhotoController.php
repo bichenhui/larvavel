@@ -11,7 +11,7 @@ class PhotoController extends Controller
 
     public function index()
     {
-		$photos=Photo::latest()->paginate(1);
+		$photos=Photo::latest()->paginate(5);
 		return view ('admin.photo.index',compact ('photos'));
     }
 	public function edit(Photo $photo)

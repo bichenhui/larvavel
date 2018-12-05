@@ -15,7 +15,8 @@ class ResponseBaseController extends Controller
      */
     public function index()
     {
-        //
+    	//创建字段   laravel-china 数据库迁移中
+        //php artisan make:migration add_votes_to_users_table --table=users
     }
 
     /**

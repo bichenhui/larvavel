@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTitleToPhotosTable extends Migration
+class CreateModulesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class AddTitleToPhotosTable extends Migration
      */
     public function up()
     {
-        Schema::table('photos', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
 			$table->engine = 'InnoDB';
-			$table->string ('title')->default ('')->comment ('标题');
+            $table->increments('id');
+			$table->string('title')->comment('模块中文名称');
+			$table->string('name')->comment('模块英文标识');
+			$table->text('permissions')->comment('模块权限');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +30,6 @@ class AddTitleToPhotosTable extends Migration
      */
     public function down()
     {
-        Schema::table('photos', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('modules');
     }
 }

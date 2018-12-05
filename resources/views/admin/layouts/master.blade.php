@@ -101,7 +101,7 @@
                        aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="fe fe-layout"></i> 网站配置
                     </a>
-                    <div class="collapse show" id="sidebarLayouts">
+                    <div class="collapse" id="sidebarLayouts">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a href="{{route ('admin.config.edit',['name'=>'base'])}}" class="nav-link">
@@ -145,7 +145,7 @@
                    aria-controls="sidebarAuth">
                     <i class="fe fe-message-square"></i> 微信管理
                 </a>
-                <div class="collapse show" id="sidebarWechat">
+                <div class="collapse" id="sidebarWechat">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
                             <a href="{{route ('wechat.response_news.index')}}" class="nav-link">
@@ -178,13 +178,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false"
                        aria-controls="sidebarAuth">
-                        <i class="fe fe-user"></i> Authentication
+                        <i class="fe fe-user"></i> 权限管理
                     </a>
                     <div class="collapse show" id="sidebarAuth">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a href="#sidebarSignIn" class="nav-link">
-                                    Sign in
+                                    用户管理
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route ('role.permission.index')}}" class="nav-link">
+                                    权限列表
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route ('role.role.index')}}" class="nav-link">
+                                    角色管理
                                 </a>
 
                             </li>

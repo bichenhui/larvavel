@@ -109,5 +109,8 @@ Route::resource ('photo','Photo\PhotoController');
 		Route::resource ('response_base','ResponseBaseController');
 	});
 
-
-
+Route::group (['prefix'=>'role','namespace'=>'Role','as'=>'role.'],function(){
+		Route::get ('permission/index','PermissionsController@index')->name ('permission.index');
+		Route::get ('permission/forget_permission_cache','PermissionsController@forgetPermissionCache')->name ('permission.forget_permission_cache');
+		Route::resource ('role','RoleController');
+});
