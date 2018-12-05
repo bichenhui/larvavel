@@ -28,6 +28,13 @@ class RoleController extends Controller
     public function store(Request $request)
     {
 //        dd ($request->all ());
+		$this->validate ($request,[
+			'name'=>'required',
+			'title'=>'required'
+		],[
+			'name.required'=>'请输入中文名称',
+			'title.required'=>'请输入角色标识'
+		]);
 		Role::create ($request->all ());
 		return redirect ()->route ('role.role.index')->with ('success','添加成功');
     }

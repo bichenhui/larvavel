@@ -54,11 +54,11 @@
                         <form method="post" action="{{route('role.role.update',$role)}}">
                             @csrf  @method('PUT')
                             <div class="form-group">
-                                <label for="exampleInputEmail1">角色标题</label>
+                                <label for="exampleInputEmail1">中文名称</label>
                                 <input type="text" name="title" value="{{$role['title']}}" class="form-control" id="exampleInputEmail1" placeholder="">
                             </div>
 
-                            <label for="exampleInputEmail1">角色名称</label>
+                            <label for="exampleInputEmail1">角色标识</label>
                             <div class="input-group mb-3">
                                 <input type="text" name="name" value="{{$role['name']}}" class="form-control" aria-label="Amount (to the nearest dollar)">
                             </div>

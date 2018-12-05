@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-10 col-xl-8">
+            <div class="col-12">
 
                 <!-- Header -->
                 <div class="header mt-md-2">
@@ -68,7 +68,7 @@
                             <td><span class="">{{$role['name']}}</span></td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-
+                                    <a href="" class="btn btn-white">设置权限</a>
                                     <a href="{{route ('role.role.edit',$role)}}" class="btn btn-white">编辑</a>
 
                                     <button  type="button" onclick="del(this)" class="btn btn-white">删除</button>
