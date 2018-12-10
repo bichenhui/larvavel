@@ -8,11 +8,19 @@ use App\Http\Controllers\Controller;
 
 class PermissionsController extends Controller
 {
+	public function __construct ()
+	{
+		$this->middleware('admin.auth',[
+			'except'=>[],
+		]);
+	}
+
 	//获取权限列表
     public function index()
     {
 		//获取所有模块表 modules 数据
 		$modules = Module::all();
+
 //        dump($modules->toArray());
 		return view('role.permission.index',compact('modules'));
     }

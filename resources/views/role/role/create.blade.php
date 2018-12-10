@@ -55,12 +55,12 @@
                             @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">中文名称</label>
-                                <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="">
+                                <input type="text" name="title" class="form-control  text-muted" id="exampleInputEmail1" placeholder="请输入中文名称">
                             </div>
 
                             <label for="exampleInputEmail1">角色标识</label>
                             <div class="input-group mb-3">
-                                <input type="text" name="name" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" name="name" class="form-control  text-muted" aria-label="Amount (to the nearest dollar)"  placeholder="请输入角色标识">
                             </div>
                             <button type="submit" class="btn btn-primary">保存</button>
                         </form>

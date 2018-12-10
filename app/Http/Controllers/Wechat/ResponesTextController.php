@@ -12,9 +12,9 @@ class ResponesTextController extends Controller
 {
 	public function __construct()
 	{
-//		$this->middleware('admin.auth',[
-//			'except'=>[],
-//		]);
+		$this->middleware('admin.auth',[
+			'except'=>[],
+		]);
 	}
     public function index()
     {

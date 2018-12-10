@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
+
 class UserPolicy
 
 {
@@ -22,8 +23,9 @@ class UserPolicy
     public function view(User $user, User $model)
     {
 //        dd ($model);  打印时候必须要把模板调用的@can 放在body外才能打印
-		//检测当前用户是不是管理员
-		return $user->is_admin==1;
+		//检测当前用户是不是管理员  检测是否有后台登录权限
+//		return $user->is_admin==1;
+//		return $model->can('Admin-admin-index');
     }
 
     /**
@@ -34,6 +36,7 @@ class UserPolicy
      */
     public function create(User $user)
     {
+
         //
     }
 

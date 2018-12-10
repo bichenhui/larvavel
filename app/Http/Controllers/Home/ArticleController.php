@@ -20,6 +20,7 @@ class ArticleController extends Controller
 
 	public function index(Request $request)
     {
+
 //    	dd (5);
 		//测试模型关联
 //		$article = Article::find(10);
@@ -41,6 +42,7 @@ class ArticleController extends Controller
 
     public function create()
     {
+
 		//获取所有栏目数据
     	$categories=Category::all ();
 //    	dd ($categories);
@@ -51,6 +53,7 @@ class ArticleController extends Controller
 
     public function store(ArticleRequest $request,Article $article)
     {
+
 		//获取当前登录用户id
 //		dd(auth()->id());
 //		dd($request->all());
@@ -68,12 +71,14 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
+
 		return view ('home.article.show',compact ('article'));
     }
 
 
     public function edit(Article $article)
     {
+
         $this->authorize('update',$article);
 //		dump($article->toArray());
 		//获取所有栏目数据
@@ -83,6 +88,7 @@ class ArticleController extends Controller
 
     public function update(ArticleRequest $request, Article $article)
     {
+
 		$this->authorize('update',$article);
 		$article->title = $request->title;
 		$article->category_id = $request->category_id;
@@ -95,6 +101,7 @@ class ArticleController extends Controller
 
     public function destroy(Article $article)
     {
+
 		$this->authorize ('delete',$article);
 		$article->delete ();
 		return redirect ()->route ('home.article.index')->with ('success','删除成功');

@@ -83,6 +83,7 @@
                         <i class="fe fe-home"></i> 学习
                     </a>
                 </li>
+                @role('fuzhanzhang|webmaster|lanmu')
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false"
                        aria-controls="sidebarPages">
@@ -96,7 +97,13 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </li>
+                @endrole
+
+                @role('fuzhanzhang|webmaster|config-admin')
                 <li class="nav-item dropdown">
+
                     <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarLayouts">
                         <i class="fe fe-layout"></i> 网站配置
@@ -133,14 +140,20 @@
                                     搜索配置
                                 </a>
                             </li>
+                            {{--@role('flash-admin')--}}
                             <li class="nav-item">
                                 <a href="{{route ('photo.index')}}" class="nav-link">
                                     轮播图配置
                                 </a>
                             </li>
+
                         </ul>
                     </div>
                 </li>
+                @endrole
+
+                @role('fuzhanzhang|webmaster|weixin')
+                <li class="nav-item">
                 <a class="nav-link" href="#sidebarWechat" data-toggle="collapse" role="button" aria-expanded="false"
                    aria-controls="sidebarAuth">
                     <i class="fe fe-message-square"></i> 微信管理
@@ -174,7 +187,8 @@
                     </ul>
                 </div>
                 </li>
-                </li>
+                @endrole
+                @role('webmaster')
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false"
                        aria-controls="sidebarAuth">
@@ -183,7 +197,7 @@
                     <div class="collapse show" id="sidebarAuth">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#sidebarSignIn" class="nav-link">
+                                <a href="{{route ('role.user.index')}}" class="nav-link">
                                     用户管理
                                 </a>
 
@@ -203,6 +217,7 @@
                         </ul>
                     </div>
                 </li>
+                @endrole
 
                 <li class="nav-item d-md-none">
                     <a class="nav-link" href="#sidebarModalActivity" data-toggle="modal">

@@ -11,7 +11,7 @@
                             <div class="col">
                                 <!-- Title -->
                                 <h2 class="header-title">
-                                    栏目管理
+                                    角色管理
                                 </h2>
 
                             </div>
@@ -68,7 +68,7 @@
                             <td><span class="">{{$role['name']}}</span></td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                    <a href="" class="btn btn-white">设置权限</a>
+                                    <a href="{{route ('role.role.show',$role)}}" class="btn btn-white">设置权限</a>
                                     <a href="{{route ('role.role.edit',$role)}}" class="btn btn-white">编辑</a>
 
                                     <button  type="button" onclick="del(this)" class="btn btn-white">删除</button>

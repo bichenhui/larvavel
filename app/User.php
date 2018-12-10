@@ -10,7 +10,9 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
-class User extends Authenticatable
+use Tymon\JWTAuth\Contracts\JWTSubject;
+
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable,HasRoles;
 
@@ -60,4 +62,22 @@ class User extends Authenticatable
 	public function zan(){
     	return $this->hasMany (Zan::class);
 	}
+    /**
+     * 获取将存储在JWT主题声明中的标识符.
+     * 就是⽤用户表主键 id *
+     * @return mixed
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * 返回⼀一个键值数组，其中包含要添加到JWT的任何⾃自定义声明. *
+     * @return array
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 }

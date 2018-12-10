@@ -10,6 +10,12 @@ use App\Http\Controllers\Controller;
 
 class ButtonController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('admin.auth',[
+			'except'=>[],
+		]);
+	}
 
     public function index()
     {
